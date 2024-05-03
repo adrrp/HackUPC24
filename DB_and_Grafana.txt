@@ -1,0 +1,8 @@
+InfluxDB Credentials:
+Database Name: barinho
+Username: adrrp
+Password: 587fb6f9cad209eb
+
+Grafana Credentials:
+Username: adrrp
+Password: ab931b1687a57d92
