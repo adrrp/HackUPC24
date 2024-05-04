@@ -22,6 +22,17 @@ Datos que a priori nos interesa (los da android):
 
 
 
+For starters, the basic things that are interesting are:
+    satellite ID (SvID) -> Raw
+    satellite IDs (SvID) used per constellation type -> Raw
+    automatic gain (AgcDb) -> Raw
+    C/N0 (Cn0DbHz) -> Raw
+    elevation -> (Android)
+    multipath -> We don't know
+    latitude & longitude over time -> (Android)
+    skyplot of satellites in view -> GnssLogger
+
+
 
 
 Primer prototipo:
@@ -38,3 +49,27 @@ Indica gen:
 -Vertical prec
 -My position
 -My altitude
+
+
+
+
+GnssMeasurement:
+*Svid = 18
+*ConstellationType = 3
+TimeOffsetNanos = 0.0
+State = 32995
+ReceivedSvTimeNanos = 65298931423035
+ReceivedSvTimeUncertaintyNanos = 797
+*Cn0DbHz = 5,000
+PseudorangeRateMetersPerSecond = -1129,263
+PseudorangeRateUncertaintyMetersPerSeconds = 0,150
+AccumulatedDeltaRangeState = 16
+AccumulatedDeltaRangeMeters = -27820,658
+AccumulatedDeltaRangeUncertaintyMeters = 2.250E-02
+CarrierFrequencyHz = 1.600312459E
+MultipathIndicator = 0
+SnrInDb = 3.6899690248713544
+FullInterSignalBiasNanos = 0.0
+FullInterSignalBiasUncertaintyNanos = 0.0
+*AgcDb = 6.0
+CarrierFreqHz = 1.600312459E

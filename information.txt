@@ -1,0 +1,88 @@
+Fix data:
+    time: Representa el momento en que se tomó la medición, generalmente expresado en nanosegundos desde una época determinada (como el 1 de enero de 1970).
+    AccuracyMeters: Indica la precisión de la ubicación en metros. Un valor menor significa una mayor precisión.
+    AgeOfDifferentialSec: Tiempo en segundos desde que se recibió la última corrección diferencial, si se está utilizando GPS diferencial.
+    AltitudeMeters: La altitud del dispositivo en metros respecto al nivel del mar.
+    BearingAccuracyDegrees: Precisión de la dirección en grados. Un valor de 0 puede indicar que no se ha establecido la precisión o que la precisión es perfecta.
+    BearingDegrees: Dirección o rumbo en grados respecto al norte verdadero.
+    LatitudeDegrees: La latitud del dispositivo en grados.
+    LongitudeDegrees: La longitud del dispositivo en grados.
+    MockLocation: Indica si la ubicación es real (0) o simulada (1).
+    NumberOfUsedSignals: Número de señales utilizadas para calcular esta ubicación.
+    Provider: Proveedor del servicio de ubicación. En este caso, "FLP" podría referirse a una abstracción de proveedor de ubicación de bajo consumo.
+    ProviderTag: Etiqueta adicional para identificar más detalles del proveedor o la tecnología usada.
+    SolutionType: Tipo de solución de posicionamiento, donde "0" podría indicar una solución estándar.
+    SpeedAccuracyMps: Precisión de la velocidad en metros por segundo.
+    SpeedMps: Velocidad en metros por segundo.
+    UnixTimeMillis: Tiempo en milisegundos desde el 1 de enero de 1970. Este es otro formato para representar el tiempo de la medición.
+    VerticalAccuracyMeters: Precisión vertical en metros.
+    VerticalSpeedAccuracyMps: Precisión de la velocidad vertical en metros por segundo.
+    elapsedRealtimeNanos: Tiempo transcurrido en nanosegundos desde que el dispositivo se encendió hasta que se tomó la medición.
+
+Nav data:
+    time: Al igual que antes, representa el momento en que se tomó la medición, generalmente en nanosegundos desde una época determinada.
+    Data: Este campo contiene una lista de valores numéricos, que podrían representar datos crudos o procesados de la señal del satélite. Estos datos podrían estar relacionados con la corrección de errores, la intensidad de la señal, entre otros aspectos técnicos de la comunicación satelital.
+    MessageId: Identificador del mensaje que se recibió del sistema GPS. Esto podría indicar un tipo específico de información o un formato de datos que se está utilizando.
+    Status: Estado del mensaje, donde "1" podría indicar que el mensaje fue recibido correctamente o algún otro estado específico dependiendo del sistema.
+    Sub-messageId: Identificador de un sub-mensaje dentro del mensaje principal. Esto podría usarse para segmentar información más detallada dentro de un flujo de datos más grande.
+    Svid: Satellite Vehicle ID, que es el identificador del satélite que envió la señal. En sistemas como GPS o Galileo, cada satélite tiene un número único.
+    SvidTag: Podría ser una etiqueta adicional o categoría para el Svid, proporcionando más contexto o clasificación.
+    Type: Este podría ser un código que clasifica el tipo de datos o mensaje recibido. El número "1537" no es inmediatamente claro sin más contexto, pero generalmente este tipo de valor podría referirse a un formato específico de datos o a un protocolo de comunicación utilizado.
+
+Raw data:
+    AccumulatedDeltaRangeMeters: Cambio acumulado en el rango en metros, que puede ser útil para cálculos de alta precisión y detección de errores en la señal GPS.
+    AccumulatedDeltaRangeState: Estado del cambio acumulado del rango, posiblemente indicando la calidad o integridad de este dato.
+    AccumulatedDeltaRangeUncertaintyMeters: Incertidumbre del cambio acumulado del rango en metros, proporcionando una medida de confianza sobre este valor.
+    AgcDb: Automatic Gain Control en decibelios, que muestra cómo el dispositivo ajusta la ganancia del receptor para optimizar la recepción de la señal.
+    BasebandCn0DbHz: Portadora a relación de ruido en decibelios-Hertz en la banda base, un indicador clave de la calidad de la señal recibida.
+    BiasNanos: Sesgo en nanosegundos que puede ser necesario ajustar en el cálculo del tiempo para obtener una estimación precisa de la posición.
+    BiasUncertaintyNanos: Incertidumbre del sesgo en nanosegundos.
+    CarrierCycles: Ciclos de la portadora, útiles para medir la fase de la portadora de la señal GPS.
+    CarrierFrequencyHz: Frecuencia de la portadora en Hertz, que identifica la frecuencia específica de la señal recibida del satélite.
+    CarrierPhase: Fase de la portadora, que puede ayudar en técnicas avanzadas de posicionamiento como RTK (Real-Time Kinematic).
+    CarrierPhaseUncertainty: Incertidumbre de la fase de la portadora, que afecta la precisión de técnicas como RTK.
+    ChipsetElapsedRealtimeNanos: Tiempo transcurrido en nanosegundos según el chipset, desde que el dispositivo se encendió hasta que se tomó la medición.
+    Cn0DbHz: Carrier-to-Noise Density en dB-Hz, un indicador clave de la calidad de la señal recibida.
+    CodeType: Tipo de código utilizado para la modulación de la señal.
+    ConstellationType: Tipo de constelación de satélites, como GPS, GLONASS, Galileo, etc.
+    DriftNanosPerSecond: Deriva en nanosegundos por segundo.
+    DriftUncertaintyNanosPerSecond: Incertidumbre de la deriva en nanosegundos por segundo.
+    FullBiasNanos: Sesgo completo en nanosegundos, que es un ajuste aplicado al tiempo del reloj del GPS para sincronizarlo con el tiempo universal coordinado (UTC).
+    FullInterSignalBiasNanos: Sesgo completo entre señales en nanosegundos.
+    FullInterSignalBiasUncertaintyNanos: Incertidumbre del sesgo completo entre señales en nanosegundos.
+    HardwareClockDiscontinuityCount: Contador de discontinuidades del reloj del hardware, que indica cuántas veces el reloj ha sido ajustado o reiniciado.
+    LeapSecond: Segundos intercalares aplicados al tiempo del reloj del GPS para mantenerlo sincronizado con UTC.
+    MultipathIndicator: Indicador de multipath, que señala si la señal ha sido reflejada desde superficies cercanas, afectando potencialmente la precisión.
+    PseudorangeRateMetersPerSecond: Tasa de cambio del pseudorange (distancia estimada al satélite) en metros por segundo.
+    PseudorangeRateUncertaintyMetersPerSecond: Incertidumbre de la tasa de cambio del pseudorange en metros por segundo.
+    ReceivedSvTimeNanos: Tiempo recibido del vehículo satelital en nanosegundos.
+    ReceivedSvTimeUncertaintyNanos: Incertidumbre del tiempo recibido del vehículo satelital en nanosegundos.
+    SatelliteInterSignalBiasNanos: Sesgo entre señales de diferentes satélites en nanosegundos.
+    SatelliteInterSignalBiasUncertaintyNanos: Incertidumbre del sesgo entre señales de diferentes satélites en nanosegundos.
+    SnrInDb: Relación señal-ruido en decibelios.
+    State: Estado del GPS, que puede incluir varios indicadores como la calidad de la señal y si está bloqueado en satélites.
+    Svid: Satellite Vehicle ID.
+    SvidTag: Etiqueta adicional para el Svid.
+    TimeNanos: Tiempo en nanosegundos desde alguna época.
+    TimeOffsetNanos: Desplazamiento de tiempo en nanosegundos respecto a alguna referencia.
+    TimeUncertaintyNanos: Incertidumbre del tiempo en nanosegundos.
+    utcTimeMillis: Tiempo en milisegundos desde la época de UTC.
+
+Status data:
+    time: Tiempo en que se tomó la medición, generalmente expresado en nanosegundos desde una época determinada.
+    AzimuthDegrees: Ángulo del satélite con respecto al norte geográfico en grados. Un valor de 0 grados indica que el satélite está hacia el norte.
+    BasebandCn0DbHz: Portadora a relación de ruido en decibelios-Hertz en la banda base, indicativo de la calidad de la señal en la etapa de procesamiento de banda base.
+    CarrierFrequencyHz: Frecuencia de la portadora de la señal recibida del satélite, en Hertz.
+    Cn0DbHz: Carrier-to-Noise Density en dB-Hz, un indicador clave de la calidad de la señal recibida.
+    ConstellationType: Tipo de constelación de satélites, como GPS (1), GLONASS (2), Galileo (3), etc.
+    ConstellationTypeTag: Etiqueta adicional para la constelación, posiblemente proporcionando más contexto o clasificación.
+    ElevationDegrees: Elevación del satélite en grados sobre el horizonte. Un valor de 0 grados indica que el satélite está justo en el horizonte.
+    HasAlmanacData: Indica si el dispositivo tiene datos del almanaque para el satélite. Los datos del almanaque contienen información orbital y de estado de todos los satélites en la constelación.
+    HasEphemerisData: Indica si el dispositivo tiene datos de efemérides del satélite. Los datos de efemérides son necesarios para la determinación precisa de la posición del satélite en el espacio en cualquier momento dado.
+    SignalCount: Número total de señales de este tipo recibidas.
+    SignalIndex: Índice de la señal específica en el conjunto de señales recibidas.
+    Svid: Satellite Vehicle ID, que es el identificador del satélite que envía la señal.
+    SvidTag: Etiqueta adicional para el Svid.
+    UnixTimeMillis: Tiempo en milisegundos desde el 1 de enero de 1970, usado para marcar cuándo se recibió la señal.
+    UsedInFix: Indica si la señal del satélite fue utilizada para calcular la última posición fija (fix). Un valor de 0 significa que no se utilizó.
+    UsedInFixTag: Etiqueta adicional relacionada con el uso de la señal en la posición fija.
