@@ -3,9 +3,38 @@ Type -> Raw (ConstellationType)
 C/N0 -> Raw (Cn0DbHz)
 Azm  -> Status (AzimuthDegrees)
 Elev -> Status (ElevationDegrees)
-UPDE ->
+UPDE -> 
 Msr  -> 
 Sync
 Msg
 Psr
 Age
+
+
+
+
+Datos que a priori nos interesa (los da android):
+    svID -> Raw (Svid)
+    Type -> Raw (ConstellationType)
+    C/N0 -> Raw (Cn0DbHz)
+    Azm  -> Status (AzimuthDegrees)
+    Elev -> Status (ElevationDegrees)
+
+
+
+
+
+Primer prototipo:
+
+Indica x sat:
+-ID
+-ConstellationType
+-Quality (C/N0)
+-Fix (it's being used to)
+-Azi & Ele
+
+Indica gen:
+-Horitzontal prec
+-Vertical prec
+-My position
+-My altitude
