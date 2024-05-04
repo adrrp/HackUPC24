@@ -1,0 +1,11 @@
+svID -> Raw (Svid)
+Type -> Raw (ConstellationType)
+C/N0 -> Raw (Cn0DbHz)
+Azm  -> Status (AzimuthDegrees)
+Elev -> Status (ElevationDegrees)
+UPDE ->
+Msr  -> 
+Sync
+Msg
+Psr
+Age
